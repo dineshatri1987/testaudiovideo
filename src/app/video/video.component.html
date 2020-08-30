@@ -1,0 +1,11 @@
+<div>
+    <button class="start-button" *ngIf="!isRecording" (click)="startRecording()">Start Recording</button>
+    <button class="stop-button" *ngIf="isRecording" (click)="stopRecording()">Stop Recording</button>
+    <!-- <button class="cancel-button" *ngIf="!isRecording" (click)="clearRecordedData()">Clear Recording</button> -->
+    <div *ngIf="isRecording"> {{recordedTime}} </div>
+    <div>
+        <video #videoPlayer
+        type='video/x-matroska; codecs="theora, vorbis"' 
+        autoplay controls ></video>
+    </div>
+</div>

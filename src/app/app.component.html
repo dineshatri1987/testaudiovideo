@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div style="width: 90%;float: left;padding: 10%;">
+  <div style="width: 50%;float: left;">
+    <input type="button" value="Test Audio" (click)="init(1)" /><br><br><br>
+    <input type="button" value="Test Video" (click)="init(2)" />
+  </div>
+  <div style="width: 50%;float: right;">
+    <app-audio *ngIf="testType==1"></app-audio>
+    <app-video *ngIf="testType==2"></app-video>
+  </div>
+</div>
+<router-outlet></router-outlet>
